@@ -1,6 +1,6 @@
 # broccoli-coffee
 
-A CoffeeScript preprocessor for Broccoli.
+A CoffeeScript filter for Broccoli.
 
 ## Usage
 
