@@ -5,8 +5,8 @@ A CoffeeScript preprocessor for Broccoli.
 ## Usage
 
 ```js
-var CoffeeScriptPreprocessor = require('broccoli-coffee')(broccoli);
-preprocessorPipeline.addPreprocessor(new CoffeeScriptPreprocessor);
+var CoffeeScriptFilter = require('broccoli-coffee')(broccoli);
+tree.addTransformer(new CoffeeScriptFilter);
 ```
 
 ### Options
@@ -17,7 +17,7 @@ If `bare` is true, the CoffeeScript compiler will not emit a top-level
 function wrapper:
 
 ```js
-new CoffeeScriptPreprocessor({
+new CoffeeScriptFilter({
   bare: true
 })
 ```
