@@ -21,3 +21,7 @@ new CoffeeScriptFilter({
   bare: true
 })
 ```
+
+## Source Maps
+
+Source maps are not yet supported.
