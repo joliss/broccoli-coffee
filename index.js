@@ -8,7 +8,7 @@ module.exports = function (broccoli) {
   CoffeeScriptFilter.prototype.extensions = ['coffee']
   CoffeeScriptFilter.prototype.targetExtension = 'js'
 
-  CoffeeScriptFilter.prototype.processString = function (string, info) {
+  CoffeeScriptFilter.prototype.processString = function (string) {
     // We must be careful to create a fresh options hash every time.
     // https://github.com/jashkenas/coffee-script/issues/1924#issuecomment-28157026
     var options = {
