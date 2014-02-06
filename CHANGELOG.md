@@ -1,5 +1,7 @@
 # master
 
+# 0.0.3
+
 * Expose new functional syntax
 
 # 0.0.2
