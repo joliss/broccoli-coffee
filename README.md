@@ -5,8 +5,8 @@ A CoffeeScript filter for Broccoli.
 ## Usage
 
 ```js
-var CoffeeScriptFilter = require('broccoli-coffee')(broccoli);
-tree.addTransformer(new CoffeeScriptFilter);
+var filterCoffeeScript = require('broccoli-coffee')(broccoli);
+tree = filterCoffeeScript(tree, options);
 ```
 
 ### Options
@@ -17,7 +17,7 @@ If `bare` is true, the CoffeeScript compiler will not emit a top-level
 function wrapper:
 
 ```js
-new CoffeeScriptFilter({
+filterCoffeeScript(tree, {
   bare: true
 })
 ```

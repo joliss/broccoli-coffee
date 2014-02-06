@@ -1,7 +1,8 @@
 module.exports = function (broccoli) {
   CoffeeScriptFilter.prototype = Object.create(broccoli.Filter.prototype)
   CoffeeScriptFilter.prototype.constructor = CoffeeScriptFilter
-  function CoffeeScriptFilter (options) {
+  function CoffeeScriptFilter (inputTree, options) {
+    this.inputTree = inputTree
     this.options = options || {}
   }
 
@@ -23,5 +24,7 @@ module.exports = function (broccoli) {
     }
   }
 
-  return CoffeeScriptFilter
+  return function filterCoffeeScript (inputTree, options) {
+    return new CoffeeScriptFilter(inputTree, options)
+  }
 }
