@@ -1,8 +1,10 @@
 var broccoli = require('broccoli')
 
+module.exports = CoffeeScriptFilter
 CoffeeScriptFilter.prototype = Object.create(broccoli.Filter.prototype)
 CoffeeScriptFilter.prototype.constructor = CoffeeScriptFilter
 function CoffeeScriptFilter (inputTree, options) {
+  if (!(this instanceof CoffeeScriptFilter)) return new CoffeeScriptFilter(inputTree, options)
   this.inputTree = inputTree
   this.options = options || {}
 }
@@ -23,9 +25,4 @@ CoffeeScriptFilter.prototype.processString = function (string) {
     err.column = err.location && err.location.first_column
     throw err
   }
-}
-
-module.exports = filterCoffeeScript
-function filterCoffeeScript (inputTree, options) {
-  return new CoffeeScriptFilter(inputTree, options)
 }
