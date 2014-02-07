@@ -1,30 +1,31 @@
-module.exports = function (broccoli) {
-  CoffeeScriptFilter.prototype = Object.create(broccoli.Filter.prototype)
-  CoffeeScriptFilter.prototype.constructor = CoffeeScriptFilter
-  function CoffeeScriptFilter (inputTree, options) {
-    this.inputTree = inputTree
-    this.options = options || {}
-  }
+var broccoli = require('broccoli')
 
-  CoffeeScriptFilter.prototype.extensions = ['coffee']
-  CoffeeScriptFilter.prototype.targetExtension = 'js'
+CoffeeScriptFilter.prototype = Object.create(broccoli.Filter.prototype)
+CoffeeScriptFilter.prototype.constructor = CoffeeScriptFilter
+function CoffeeScriptFilter (inputTree, options) {
+  this.inputTree = inputTree
+  this.options = options || {}
+}
 
-  CoffeeScriptFilter.prototype.processString = function (string) {
-    // We must be careful to create a fresh options hash every time.
-    // https://github.com/jashkenas/coffee-script/issues/1924#issuecomment-28157026
-    var options = {
-      bare: this.options.bare
-    }
-    try {
-      return require('coffee-script').compile(string, options)
-    } catch (err) {
-      err.line = err.location && err.location.first_line
-      err.column = err.location && err.location.first_column
-      throw err
-    }
-  }
+CoffeeScriptFilter.prototype.extensions = ['coffee']
+CoffeeScriptFilter.prototype.targetExtension = 'js'
 
-  return function filterCoffeeScript (inputTree, options) {
-    return new CoffeeScriptFilter(inputTree, options)
+CoffeeScriptFilter.prototype.processString = function (string) {
+  // We must be careful to create a fresh options hash every time.
+  // https://github.com/jashkenas/coffee-script/issues/1924#issuecomment-28157026
+  var options = {
+    bare: this.options.bare
   }
+  try {
+    return require('coffee-script').compile(string, options)
+  } catch (err) {
+    err.line = err.location && err.location.first_line
+    err.column = err.location && err.location.first_column
+    throw err
+  }
+}
+
+module.exports = filterCoffeeScript
+function filterCoffeeScript (inputTree, options) {
+  return new CoffeeScriptFilter(inputTree, options)
 }

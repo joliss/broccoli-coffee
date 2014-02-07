@@ -5,7 +5,7 @@ A CoffeeScript filter for Broccoli.
 ## Usage
 
 ```js
-var filterCoffeeScript = require('broccoli-coffee')(broccoli);
+var filterCoffeeScript = require('broccoli-coffee');
 tree = filterCoffeeScript(tree, options);
 ```
 
