@@ -2,6 +2,12 @@
 
 A CoffeeScript filter for Broccoli.
 
+## Installation
+
+```bash
+npm install --save broccoli-coffee
+```
+
 ## Usage
 
 ```js
