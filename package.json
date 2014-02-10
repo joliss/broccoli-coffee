@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "coffee-script": "~1.6.3",
-    "broccoli": "0.0.10"
+    "broccoli": "0.0.12"
   }
 }
