@@ -1,5 +1,7 @@
 # master
 
+* Add missing dependency
+
 # 0.0.5
 
 * Use `broccoli-filter` instead of `broccoli.Filter`
