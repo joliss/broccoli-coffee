@@ -1,7 +1,7 @@
 {
   "name": "broccoli-coffee",
   "description": "CoffeeScript filter for Broccoli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Jo Liss <joliss42@gmail.com>",
   "main": "index.js",
   "license": "MIT",
