@@ -1,7 +1,7 @@
-var broccoli = require('broccoli')
+var Filter = require('broccoli-filter')
 
 module.exports = CoffeeScriptFilter
-CoffeeScriptFilter.prototype = Object.create(broccoli.Filter.prototype)
+CoffeeScriptFilter.prototype = Object.create(Filter.prototype)
 CoffeeScriptFilter.prototype.constructor = CoffeeScriptFilter
 function CoffeeScriptFilter (inputTree, options) {
   if (!(this instanceof CoffeeScriptFilter)) return new CoffeeScriptFilter(inputTree, options)
