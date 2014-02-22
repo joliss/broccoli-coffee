@@ -1,5 +1,7 @@
 # master
 
+* Update dependency to CoffeeScript `^1.7.1`
+
 # 0.0.6
 
 * Add missing dependency
