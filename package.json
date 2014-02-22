@@ -10,7 +10,7 @@
     "url": "https://github.com/joliss/broccoli-coffee"
   },
   "dependencies": {
-    "coffee-script": "^1.7.1",
+    "coffee-script": "~1.7.1",
     "broccoli-filter": "~0.0.1"
   }
 }

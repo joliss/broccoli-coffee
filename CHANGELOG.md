@@ -1,5 +1,7 @@
 # master
 
+* Tighten dependency to CoffeeScript `~1.7.1`; CoffeeScript doesn't use semver
+
 # 0.0.7
 
 * Update dependency to CoffeeScript `^1.7.1`
