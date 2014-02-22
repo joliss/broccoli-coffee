@@ -7,7 +7,8 @@ CoffeeScriptFilter.prototype.constructor = CoffeeScriptFilter
 function CoffeeScriptFilter (inputTree, options) {
   if (!(this instanceof CoffeeScriptFilter)) return new CoffeeScriptFilter(inputTree, options)
   Filter.call(this, inputTree, options)
-  this.bare = options && options.bare
+  options = options || {}
+  this.bare = options.bare
 }
 
 CoffeeScriptFilter.prototype.extensions = ['coffee']
