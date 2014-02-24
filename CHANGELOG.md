@@ -1,5 +1,7 @@
 # master
 
+* Update dependency on broccoli-filter
+
 # 0.0.8
 
 * Tighten dependency to CoffeeScript `~1.7.1`; CoffeeScript doesn't use semver
