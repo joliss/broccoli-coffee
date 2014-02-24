@@ -9,6 +9,11 @@
     "type": "git",
     "url": "https://github.com/joliss/broccoli-coffee"
   },
+  "keywords": [
+    "broccoli-plugin",
+    "coffeescript",
+    "javascript"
+  ],
   "dependencies": {
     "coffee-script": "~1.7.1",
     "broccoli-filter": "^0.1.0"
