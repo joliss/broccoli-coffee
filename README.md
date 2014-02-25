@@ -5,7 +5,7 @@ A CoffeeScript filter for Broccoli.
 ## Installation
 
 ```bash
-npm install --save broccoli-coffee
+npm install --save-dev broccoli-coffee
 ```
 
 ## Usage
