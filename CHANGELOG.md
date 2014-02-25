@@ -1,5 +1,7 @@
 # master
 
+# 0.1.0
+
 * Update dependency on broccoli-filter
 
 # 0.0.8
