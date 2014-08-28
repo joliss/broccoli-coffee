@@ -1,5 +1,7 @@
 # master
 
+# 0.1.1
+
 * Force newer version of broccoli-filter
 
 # 0.1.0
