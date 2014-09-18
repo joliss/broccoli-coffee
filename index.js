@@ -11,7 +11,7 @@ function CoffeeScriptFilter (inputTree, options) {
   this.bare = options.bare
 }
 
-CoffeeScriptFilter.prototype.extensions = ['coffee']
+CoffeeScriptFilter.prototype.extensions = ['coffee','litcoffee','coffee.md']
 CoffeeScriptFilter.prototype.targetExtension = 'js'
 
 CoffeeScriptFilter.prototype.processString = function (string) {
