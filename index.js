@@ -1,18 +1,22 @@
-var Filter = require('broccoli-filter')
-var coffeeScript = require('coffee-script')
+/* jshint node: true */
 
-module.exports = CoffeeScriptFilter
-CoffeeScriptFilter.prototype = Object.create(Filter.prototype)
-CoffeeScriptFilter.prototype.constructor = CoffeeScriptFilter
+var Filter = require('broccoli-filter');
+var coffeeScript = require('coffee-script');
+
+module.exports = CoffeeScriptFilter;
+CoffeeScriptFilter.prototype = Object.create(Filter.prototype);
+CoffeeScriptFilter.prototype.constructor = CoffeeScriptFilter;
 function CoffeeScriptFilter (inputTree, options) {
-  if (!(this instanceof CoffeeScriptFilter)) return new CoffeeScriptFilter(inputTree, options)
-  Filter.call(this, inputTree, options)
-  options = options || {}
-  this.bare = options.bare
+  if (!(this instanceof CoffeeScriptFilter)) {
+    return new CoffeeScriptFilter(inputTree, options);
+  }
+  Filter.call(this, inputTree, options);
+  options = options || {};
+  this.bare = options.bare;
 }
 
-CoffeeScriptFilter.prototype.extensions = ['coffee','litcoffee','coffee.md']
-CoffeeScriptFilter.prototype.targetExtension = 'js'
+CoffeeScriptFilter.prototype.extensions = ['coffee','litcoffee','coffee.md'];
+CoffeeScriptFilter.prototype.targetExtension = 'js';
 
 CoffeeScriptFilter.prototype.processString = function (string, srcFile) {
   var coffeeScriptOptions = {
@@ -21,10 +25,10 @@ CoffeeScriptFilter.prototype.processString = function (string, srcFile) {
   };
 
   try {
-    return coffeeScript.compile(string, coffeeScriptOptions)
+    return coffeeScript.compile(string, coffeeScriptOptions);
   } catch (err) {
-    err.line = err.location && err.location.first_line
-    err.column = err.location && err.location.first_column
-    throw err
+    err.line = err.location && err.location.first_line;
+    err.column = err.location && err.location.first_column;
+    throw err;
   }
-}
+};
