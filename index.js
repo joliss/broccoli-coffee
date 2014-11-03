@@ -11,14 +11,14 @@ function CoffeeScriptFilter (inputTree, options) {
   this.bare = options.bare
 }
 
-CoffeeScriptFilter.prototype.extensions = ['coffee','litcoffee','coffee.md']
+CoffeeScriptFilter.prototype.extensions = ['coffee', 'litcoffee', 'coffee.md']
 CoffeeScriptFilter.prototype.targetExtension = 'js'
 
 CoffeeScriptFilter.prototype.processString = function (string, srcFile) {
   var coffeeScriptOptions = {
     bare: this.bare,
     literate: coffeeScript.helpers.isLiterate(srcFile)
-  };
+  }
 
   try {
     return coffeeScript.compile(string, coffeeScriptOptions)
