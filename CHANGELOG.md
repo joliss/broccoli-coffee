@@ -1,5 +1,7 @@
 # master
 
+* Add support for literate CoffeeScript (`.litcoffee` and `.coffee.md`)
+
 # 0.2.0
 
 * Upgrade to coffee-script ~1.8.0

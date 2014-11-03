@@ -15,6 +15,9 @@ var filterCoffeeScript = require('broccoli-coffee');
 tree = filterCoffeeScript(tree, options);
 ```
 
+All `.coffee` files (as well as `.litcoffee` and `.coffee.md`) will be
+replaced with compiled `.js` files.
+
 ### Options
 
 #### bare
