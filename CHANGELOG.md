@@ -1,5 +1,7 @@
 # master
 
+# 0.4.0
+
 * Upgrade to coffee-script ~1.9.0
 
 # 0.3.0
