@@ -15,7 +15,7 @@
     "javascript"
   ],
   "dependencies": {
-    "coffee-script": "~1.9.0",
-    "broccoli-filter": "^0.1.7"
+    "coffee-script": "~1.9.1",
+    "broccoli-filter": "^0.1.12"
   }
 }

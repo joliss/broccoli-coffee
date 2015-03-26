@@ -1,5 +1,6 @@
 # master
 
+* Upgrade to coffee-script ~1.9.1
 * Fix off-by-one error in line/column error reporting
 
 # 0.4.0
