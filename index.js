@@ -23,8 +23,10 @@ CoffeeScriptFilter.prototype.processString = function (string, srcFile) {
   try {
     return coffeeScript.compile(string, coffeeScriptOptions)
   } catch (err) {
-    err.line = err.location && err.location.first_line
-    err.column = err.location && err.location.first_column
+    // CoffeeScript reports line and column as zero-indexed
+    // first_line/first_column properties; pass them on
+    err.line = err.location && ((err.location.first_line || 0) + 1)
+    err.column = err.location && ((err.location.first_column || 0) + 1)
     throw err
   }
 }
