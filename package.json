@@ -14,8 +14,17 @@
     "coffeescript",
     "javascript"
   ],
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
     "coffee-script": "~1.10.0",
     "broccoli-filter": "^0.1.12"
+  },
+  "devDependencies": {
+    "broccoli-fixture": "^0.1.0",
+    "chai": "^3.4.0",
+    "chai-as-promised": "^5.1.0",
+    "mocha": "^2.3.3"
   }
 }
