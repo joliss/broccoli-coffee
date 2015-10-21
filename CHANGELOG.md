@@ -1,5 +1,7 @@
 # master
 
+* Update broccoli-filter dependency
+
 # 0.5.0
 
 * Upgrade to coffee-script ~1.10.0
