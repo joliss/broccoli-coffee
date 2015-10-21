@@ -1,5 +1,7 @@
 # broccoli-coffee
 
+[![Build Status](https://travis-ci.org/joliss/broccoli-coffee.svg?branch=master)](https://travis-ci.org/joliss/broccoli-coffee)
+
 A CoffeeScript filter for Broccoli.
 
 ## Installation
