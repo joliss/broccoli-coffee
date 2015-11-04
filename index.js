@@ -1,5 +1,6 @@
-var Filter = require('broccoli-filter')
+var Filter = require('broccoli-persistent-filter')
 var coffeeScript = require('coffee-script')
+var stringify = require('json-stable-stringify')
 
 module.exports = CoffeeScriptFilter
 CoffeeScriptFilter.prototype = Object.create(Filter.prototype)
@@ -9,10 +10,26 @@ function CoffeeScriptFilter (inputTree, options) {
   Filter.call(this, inputTree, options)
   options = options || {}
   this.bare = options.bare
+  this.options = options;
 }
 
 CoffeeScriptFilter.prototype.extensions = ['coffee', 'litcoffee', 'coffee.md']
 CoffeeScriptFilter.prototype.targetExtension = 'js'
+CoffeeScriptFilter.prototype.baseDir = function() {
+  return __dirname;
+};
+
+CoffeeScriptFilter.prototype.optionsHash = function() {
+  if (!this._optionsHash) {
+    this._optionsHash = stringify(this.options);
+  }
+
+  return this._optionsHash;
+};
+
+CoffeeScriptFilter.prototype.cacheKeyProcessString = function(string, relativePath) {
+  return this.optionsHash() + Filter.prototype.cacheKeyProcessString.call(this, string, relativePath);
+};
 
 CoffeeScriptFilter.prototype.processString = function (string, srcFile) {
   var coffeeScriptOptions = {
