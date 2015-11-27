@@ -6,10 +6,16 @@ module.exports = CoffeeScriptFilter
 CoffeeScriptFilter.prototype = Object.create(Filter.prototype)
 CoffeeScriptFilter.prototype.constructor = CoffeeScriptFilter
 function CoffeeScriptFilter (inputTree, options) {
+  if (!options || typeof options !== 'object') {
+    options = { persist: true };
+  } else if (typeof options.persist === 'undefined') {
+    options.persist = true;
+  }
+
   if (!(this instanceof CoffeeScriptFilter)) return new CoffeeScriptFilter(inputTree, options)
   Filter.call(this, inputTree, options)
   options = options || {}
-  this.bare = options.bare
+  this.bare = options.bare;
   this.options = options;
 }
 
