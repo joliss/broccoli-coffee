@@ -1,5 +1,7 @@
 # master
 
+# 0.6.0
+
 * Use broccoli-persistent-filter for better performance
 
 # 0.5.1
