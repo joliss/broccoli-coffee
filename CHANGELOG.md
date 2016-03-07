@@ -1,5 +1,7 @@
 # master
 
+* Use broccoli-persistent-filter for better performance
+
 # 0.5.1
 
 * Update broccoli-filter dependency
