@@ -1,5 +1,7 @@
 # master
 
+* Upgrade to coffee-script ~1.11.1
+
 # 0.6.0
 
 * Use broccoli-persistent-filter for better performance
