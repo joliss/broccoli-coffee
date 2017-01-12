@@ -3,6 +3,7 @@ var coffeeScript = require('coffee-script')
 var stringify = require('json-stable-stringify')
 
 module.exports = CoffeeScriptFilter
+coffeeScript.register()
 CoffeeScriptFilter.prototype = Object.create(Filter.prototype)
 CoffeeScriptFilter.prototype.constructor = CoffeeScriptFilter
 function CoffeeScriptFilter (inputTree, options) {
