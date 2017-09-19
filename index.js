@@ -1,5 +1,5 @@
 var Filter = require('broccoli-persistent-filter')
-var coffeeScript = require('coffee-script')
+var coffeeScript = require('coffeescript')
 var stringify = require('json-stable-stringify')
 
 module.exports = CoffeeScriptFilter
