@@ -1,5 +1,8 @@
 # master
 
+* Upgrade to coffeescript ~2.2.2
+* We now require Node version 6 or newer
+
 # 0.8.0
 
 * Upgrade to coffee-script ~1.12.1
