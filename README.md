@@ -18,7 +18,8 @@ var outputNode = new BroccoliCoffee(inputNode, options);
 ```
 
 All `.coffee` files (as well as `.litcoffee` and `.coffee.md`) in `inputNode`
-will be replaced with compiled `.js` files in `outputNode`.
+will be replaced with compiled `.js` files in `outputNode`. All other files will
+be passed through unchanged.
 
 ### Options
 
