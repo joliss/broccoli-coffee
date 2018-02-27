@@ -1,5 +1,7 @@
 # master
 
+* Update dependencies
+
 # 1.0.0
 
 * Upgrade to coffeescript ~2.2.2

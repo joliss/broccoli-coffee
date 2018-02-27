@@ -18,9 +18,9 @@
     "test": "mocha"
   },
   "dependencies": {
-    "broccoli-persistent-filter": "^1.1.5",
+    "broccoli-persistent-filter": "^1.4.3",
     "coffeescript": "~2.2.2",
-    "json-stable-stringify": "^1.0.0"
+    "json-stable-stringify": "^1.0.1"
   },
   "devDependencies": {
     "broccoli-fixture": "^1.0.0",
