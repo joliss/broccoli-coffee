@@ -27,7 +27,7 @@ CoffeeScriptFilter.prototype.baseDir = function() {
 
 CoffeeScriptFilter.prototype.optionsHash = function() {
   if (!this._optionsHash) {
-    this._optionsHash = stringify(this.options);
+    this._optionsHash = stringify(this.options).replace(/[:"]/g, '_');
   }
 
   return this._optionsHash;
