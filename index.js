@@ -15,6 +15,7 @@ function CoffeeScriptFilter (inputTree, options) {
   if (!(this instanceof CoffeeScriptFilter)) return new CoffeeScriptFilter(inputTree, options)
   Filter.call(this, inputTree, options)
   options = options || {}
+  if (options.coffeescript) coffeeScript = options.coffeescript;
   this.bare = options.bare;
   this.options = options;
 }
