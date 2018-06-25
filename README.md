@@ -30,7 +30,18 @@ function wrapper:
 
 ```js
 new BroccoliCoffee(node, {
-  bare: true
+  bare: true,
+  coffeescript: require('coffee-script')
+})
+```
+
+#### coffeescript
+
+BroccoliCoffee uses coffeescript 2.x. If your project depends on coffeescript 1.x, pass it in `coffeescript`
+
+```js
+new BroccoliCoffee(node, {
+  coffeescript: require('coffee-script')
 })
 ```
 
